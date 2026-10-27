@@ -1,0 +1,329 @@
+THIRD-PARTY NOTICES for the FZ module (FZ-pxm.dll)
+
+This product is based on software from the PixInsight project, developed by
+Pleiades Astrophoto and its contributors (https://pixinsight.com/).
+It is not made, endorsed or supported by Pleiades Astrophoto.
+
+FZ-pxm.dll is statically linked with the libraries below. Their licence texts follow.
+
+==============================================================================
+CFITSIO 4.7.0 (NASA HEASARC) - image decompression
+==============================================================================
+
+Copyright (Unpublished--all rights reserved under the copyright laws of
+the United States), U.S. Government as represented by the Administrator
+of the National Aeronautics and Space Administration.  No copyright is
+claimed in the United States under Title 17, U.S. Code.
+
+Permission to freely use, copy, modify, and distribute this software
+and its documentation without fee is hereby granted, provided that this
+copyright notice and disclaimer of warranty appears in all copies.
+
+DISCLAIMER:
+
+THE SOFTWARE IS PROVIDED 'AS IS' WITHOUT ANY WARRANTY OF ANY KIND,
+EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO,
+ANY WARRANTY THAT THE SOFTWARE WILL CONFORM TO SPECIFICATIONS, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, AND FREEDOM FROM INFRINGEMENT, AND ANY WARRANTY THAT THE
+DOCUMENTATION WILL CONFORM TO THE SOFTWARE, OR ANY WARRANTY THAT THE
+SOFTWARE WILL BE ERROR FREE.  IN NO EVENT SHALL NASA BE LIABLE FOR ANY
+DAMAGES, INCLUDING, BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR
+CONSEQUENTIAL DAMAGES, ARISING OUT OF, RESULTING FROM, OR IN ANY WAY
+CONNECTED WITH THIS SOFTWARE, WHETHER OR NOT BASED UPON WARRANTY,
+CONTRACT, TORT , OR OTHERWISE, WHETHER OR NOT INJURY WAS SUSTAINED BY
+PERSONS OR PROPERTY OR OTHERWISE, AND WHETHER OR NOT LOSS WAS SUSTAINED
+FROM, OR AROSE OUT OF THE RESULTS OF, OR USE OF, THE SOFTWARE OR
+SERVICES PROVIDED HEREUNDER.
+
+==============================================================================
+PixInsight Class Library (PCL) 2.10.4 - PCL License Version 2.0
+==============================================================================
+
+===============================================================================
+
+Certain components of this software are released under the PixInsight Class
+Library License Version 2.0.
+
+The terms of this license apply to:
+
+- The PixInsight core executable.
+
+- All executables pertaining to the PixInsight Update system.
+
+- All PCL-based modules included in the standard PixInsight distribution.
+
+- The Linux/UNIX PixInsight installer program.
+
+- All scripts released under the PixInsight Class Library license. This
+  includes most scripts on the src/scripts installation directory.
+
+- All C++ and JavaScript source code files included in the following
+  installation directories:
+      src/bootstrap, src/reflect, src/pcl, include/pcl, include/pjsr
+
+- Any other component of this software explicitly or implicitly released under
+  the PixInsight Class Library License Version 2.0.
+
+===============================================================================
+
+PixInsight Class Library License
+Version 2.0.1, 29 December 2025
+
+Copyright (c) 2025, Pleiades Astrophoto S.L. All Rights Reserved.
+
+Redistribution and use in both source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright notice,
+      this list of conditions, and the following restriction and disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions, and the following restriction and disclaimer in
+      the documentation and/or other materials provided with the distribution.
+
+   3. Neither the names "PixInsight" and "Pleiades Astrophoto" nor the names of
+      their contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission. For written
+      permission, please contact info@pixinsight.com.
+
+   4. All products derived from this software, in any form whatsoever, must
+      reproduce the following acknowledgment in the end-user documentation
+      and/or other materials provided with the product:
+
+      "This product is based on software from the PixInsight project, developed
+      by Pleiades Astrophoto and its contributors (https://pixinsight.com/)."
+
+      Alternatively, if that is where third-party acknowledgments normally
+      appear, this acknowledgment must be reproduced in the product itself.
+
+The use of this source code in whole or in part, in both source and binary
+forms, is strictly forbidden for:
+
+   a. Training machine learning systems, including, but not limited to,
+      language models, generative models, artificial intelligence systems, or
+      automated code generation systems.
+
+   b. Inclusion in training datasets or corpora for machine learning systems,
+      including, but not limited to, language models and generative models.
+
+   c. Providing API services that incorporate or derive from this software for
+      automated code generation.
+
+   This restriction applies to all commercial or non-profit entities and
+   expressly includes use via APIs, wrappers, or third-party tools. Exceptions
+   require explicit written permission from Pleiades Astrophoto S.L. For
+   written permission, please contact info@pixinsight.com.​
+
+THIS SOFTWARE IS PROVIDED BY PLEIADES ASTROPHOTO AND ITS CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL PLEIADES ASTROPHOTO OR ITS CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, BUSINESS INTERRUPTION; PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; AND LOSS OF USE, DATA OR PROFITS) HOWEVER CAUSED
+AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==============================================================================
+zlib 1.3.1 (built with PCL, used by CFITSIO)
+==============================================================================
+
+Copyright notice:
+
+ (C) 1995-2022 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Jean-loup Gailly        Mark Adler
+  jloup@gzip.org          madler@alumni.caltech.edu
+
+==============================================================================
+Little CMS (lcms2, part of PCL)
+==============================================================================
+
+MIT License
+
+Copyright (c) 2023 Marti Maria Saguer
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the 
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to 
+permit persons to whom the Software is furnished to do so, subject
+to the following conditions:
+
+The above copyright notice and this permission notice shall be 
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+==============================================================================
+LZ4 (part of PCL)
+==============================================================================
+
+This repository uses 2 different licenses :
+- all files in the `lib` directory use a BSD 2-Clause license
+- all other files use a GPLv2 license, unless explicitly stated otherwise
+
+Relevant license is reminded at the top of each source file,
+and with presence of COPYING or LICENSE file in associated directories.
+
+This model is selected to emphasize that
+files in the `lib` directory are designed to be included into 3rd party applications,
+while all other files, in `programs`, `tests` or `examples`,
+are intended to be used "as is", as part of their intended scenarios,
+with no intention to support 3rd party integration use cases.
+
+==============================================================================
+Zstandard (part of PCL)
+==============================================================================
+
+BSD License
+
+For Zstandard software
+
+Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+ * Neither the name Facebook, nor Meta, nor the names of its contributors may
+   be used to endorse or promote products derived from this software without
+   specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==============================================================================
+MINPACK / cminpack (part of PCL)
+==============================================================================
+
+Minpack Copyright Notice (1999) University of Chicago.  All rights reserved
+
+Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the
+following conditions are met:
+
+1. Redistributions of source code must retain the above
+copyright notice, this list of conditions and the following
+disclaimer.
+
+2. Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following
+disclaimer in the documentation and/or other materials
+provided with the distribution.
+
+3. The end-user documentation included with the
+redistribution, if any, must include the following
+acknowledgment:
+
+   "This product includes software developed by the
+   University of Chicago, as Operator of Argonne National
+   Laboratory.
+
+Alternately, this acknowledgment may appear in the software
+itself, if and wherever such third-party acknowledgments
+normally appear.
+
+4. WARRANTY DISCLAIMER. THE SOFTWARE IS SUPPLIED "AS IS"
+WITHOUT WARRANTY OF ANY KIND. THE COPYRIGHT HOLDER, THE
+UNITED STATES, THE UNITED STATES DEPARTMENT OF ENERGY, AND
+THEIR EMPLOYEES: (1) DISCLAIM ANY WARRANTIES, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE
+OR NON-INFRINGEMENT, (2) DO NOT ASSUME ANY LEGAL LIABILITY
+OR RESPONSIBILITY FOR THE ACCURACY, COMPLETENESS, OR
+USEFULNESS OF THE SOFTWARE, (3) DO NOT REPRESENT THAT USE OF
+THE SOFTWARE WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS, (4)
+DO NOT WARRANT THAT THE SOFTWARE WILL FUNCTION
+UNINTERRUPTED, THAT IT IS ERROR-FREE OR THAT ANY ERRORS WILL
+BE CORRECTED.
+
+5. LIMITATION OF LIABILITY. IN NO EVENT WILL THE COPYRIGHT
+HOLDER, THE UNITED STATES, THE UNITED STATES DEPARTMENT OF
+ENERGY, OR THEIR EMPLOYEES: BE LIABLE FOR ANY INDIRECT,
+INCIDENTAL, CONSEQUENTIAL, SPECIAL OR PUNITIVE DAMAGES OF
+ANY KIND OR NATURE, INCLUDING BUT NOT LIMITED TO LOSS OF
+PROFITS OR LOSS OF DATA, FOR ANY REASON WHATSOEVER, WHETHER
+SUCH LIABILITY IS ASSERTED ON THE BASIS OF CONTRACT, TORT
+(INCLUDING NEGLIGENCE OR STRICT LIABILITY), OR OTHERWISE,
+EVEN IF ANY OF SAID PARTIES HAS BEEN WARNED OF THE
+POSSIBILITY OF SUCH LOSS OR DAMAGES.
+
+==============================================================================
+RFC 6234 SHA code (part of PCL)
+==============================================================================
+
+See sha-private.h in the PCL source distribution.
+Copyright (c) 2011 IETF Trust and the persons identified as
+authors of the code.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the following
+conditions are met:
+
+- Redistributions of source code must retain the above
+  copyright notice, this list of conditions and
+  the following disclaimer.
+
+- Redistributions in binary form must reproduce the above
+  copyright notice, this list of conditions and the following
+  disclaimer in the documentation and/or other materials provided
+  with the distribution.
+
+- Neither the name of Internet Society, IETF or IETF Trust, nor
+  the names of specific contributors, may be used to endorse or
+  promote products derived from this software without specific
+  prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

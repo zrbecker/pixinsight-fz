@@ -1,0 +1,19 @@
+﻿# Dependencies fetched or copied by the build scripts (not ours to redistribute here)
+/PCL/
+/cfitsio/
+/download/
+
+# Build output
+/module/build/
+/module/x64/
+/test/*.exe
+/test/*.obj
+/test/fixtures/
+*.log
+
+# Release packages go on GitHub Releases, not in git
+/release/
+
+# Signatures are tied to the signer's PixInsight licence; never commit them or keys
+*.xsgn
+*.xssk
