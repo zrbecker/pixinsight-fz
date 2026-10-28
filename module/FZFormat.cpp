@@ -11,7 +11,11 @@ IsoString FZFormat::Name() const
 
 StringList FZFormat::FileExtensions() const
 {
-   // PixInsight matches on the last extension only, so ".fz" is what selects us.
+   // PixInsight first tries everything after the first dot of the name, then the last
+   // extension. "image_180.00s.fits.fz" falls through to ".fz" and reaches us, but
+   // "image.fits.fz" asks for ".fits.fz", which the FITS module claims (without being able
+   // to decode it). Claiming ".fits.fz" here too is not possible: PixInsight refuses to
+   // install a second format for an extension that is already registered.
    return StringList() << ".fz";
 }
 

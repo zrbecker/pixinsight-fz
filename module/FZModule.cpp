@@ -1,7 +1,6 @@
 // FZ module: read-only support for tile-compressed FITS (.fits.fz) in PixInsight.
-// PixInsight picks a file format from the last extension only, so ".fits.fz" reaches
-// no reader; its own FITS module also cannot decode compressed images. This module
-// registers ".fz" and decodes through CFITSIO.
+// PixInsight has no reader for ".fz" files, and its own FITS module cannot decode
+// compressed images. This module registers ".fz" and decodes through CFITSIO.
 
 #define MODULE_VERSION_MAJOR     01
 #define MODULE_VERSION_MINOR     00

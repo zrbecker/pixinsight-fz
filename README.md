@@ -2,10 +2,10 @@
 
 Read-only support for tile-compressed FITS (`.fits.fz`) in PixInsight 1.9.4. Current version 1.0.1.
 
-PixInsight chooses a file format from the last extension only, so `.fits.fz` finds no reader
-("No installed image file format was found for the specified file extension '.fz'"), and its
-FITS module cannot decode compressed images even under a `.fits` name ("The FITS file contains
-no readable image"). This module registers `.fz` and decodes with CFITSIO. All header keywords are
+Without it PixInsight has no reader for `.fz` ("No installed image file format was found for the
+specified file extension '.fz'"), and its FITS module cannot decode compressed images ("The FITS
+file contains no readable image"). This module registers `.fz` and decodes with CFITSIO; see
+Known limitation for names like `NAME.fits.fz`. All header keywords are
 passed through and rows are oriented the way the FITS module orients them by default, so an image
 reads the same as the FITS module reads the uncompressed file. Writing `.fz` is not supported.
 
@@ -59,11 +59,16 @@ test\fzcheck.exe <file.fits.fz>
 `fzcheck` reads the file into memory, opens it with `fits_open_memfile`, finds the first image HDU,
 reads `ROWORDER` and flips bottom-up rows, as `FZInstance.cpp` does, then prints geometry, the header
 and pixel checksums. The fixtures are one 64x48 gradient with a bright square near the top-left, stored
-as top-down, bottom-up, with `[brackets] (1)` in the name, with an accented name, and as plain FITS.
-All `.fz` fixtures must print the same sums and top-row signature (873600). In PixInsight all five
-must look identical, with the square top-left.
+as top-down, bottom-up, with `[brackets] (1)` in the name, with an accented name (all `*.t.fits.fz`, the
+`.t` steering PixInsight to this module; see Known limitation), as `gradient_undotted.fits.fz`, and as
+plain FITS. All `.fz` fixtures must print the same sums and top-row signature (873600). In PixInsight
+the four `.t.fits.fz` files and `gradient_plain.fits` must look identical, with the square top-left;
+`gradient_undotted.fits.fz` is expected to fail ("no readable image").
 
-Verified on a calibrated ASI2600MC frame: decoded pixels match the uncompressed file exactly (count,
+Checked in PixInsight 1.9.4 with 1.0.1: all four `.t.fits.fz` fixtures and `gradient_plain.fits` show
+the square top-left (bottom-up flip, brackets and accented name work); `gradient_undotted.fits.fz` fails.
+
+Verified with `fzcheck` on a calibrated ASI2600MC frame: decoded pixels match the uncompressed file exactly (count,
 sum, sum of squares, first and last values), and the header has the same 81 keywords.
 
 ## Signing, installing, releasing
@@ -108,3 +113,15 @@ confirmed with Pleiades.
   `top-down`/`up-bottom`, `use-roworder-keywords` and `ignore-roworder-keywords` are honoured. The
   FITS module's own preferences are not read, so a user who changed them there gets the defaults here.
 - Not yet tested: WBPP and ImageIntegration runs on `.fz` lights.
+
+## Known limitation: `NAME.fits.fz`
+
+PixInsight picks a reader from everything after the first dot of the file name and falls back to
+the last extension only when nothing matches (confirmed in PixInsight 1.9.4: `gradient.dotted.fits.fz`
+opens through this module, `gradient_top-down.fits.fz` goes to the FITS module and fails with "The FITS
+file contains no readable image"). The FITS module registers `.fits.fz` without being able to decode it.
+Registering `.fits.fz`, `.fit.fz` and `.fts.fz` here as well was tried (1.0.2, never released):
+PixInsight refused to install it with "MetaFileFormat: FZ: An installed file format already supports
+file extension: .fits.fz". So names with another dot before `.fits.fz` (all N.I.N.A. names, which carry
+`180.00s` and the like) work, and plain `NAME.fits.fz` does not. Workaround: add a dot (`NAME.c.fits.fz`)
+or rename to `NAME.fz`. A real fix needs Pleiades to change the FITS module.

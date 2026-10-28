@@ -6,8 +6,26 @@ CFITSIO) in PixInsight 1.9.4. Without it PixInsight reports "No installed image 
 format was found for the specified file extension '.fz'".
 
 Once installed, .fits.fz files open wherever PixInsight opens image files (File > Open,
-Debayer, ImageContainer). WBPP and ImageIntegration have not been tested with it yet.
+Debayer, ImageContainer), with one naming limitation (see Known limitation below).
+WBPP and ImageIntegration have not been tested with it yet.
 The module only reads; it cannot save .fz.
+
+
+Known limitation: files named NAME.fits.fz with no other dot
+------------------------------------------------------------
+PixInsight picks a reader from everything after the FIRST dot in the file name, and
+only falls back to the last extension (.fz) when nothing matches. Its built-in FITS
+module claims ".fits.fz" but cannot decode compressed images, so:
+
+   LIGHT_Ha_300.00s_0001.fits.fz   opens   (".00s_0001.fits.fz" matches nothing, so ".fz")
+   M31.v2.fits.fz                  opens   (".v2.fits.fz" matches nothing, so ".fz")
+   M31_0001.fits.fz                FAILS   (".fits.fz" goes to the FITS module:
+                                            "The FITS file contains no readable image")
+
+This module cannot also claim ".fits.fz": PixInsight refuses to install a second
+format for an extension that is already registered. Workaround for affected files:
+add a dot before ".fits.fz" (for example M31_0001.c.fits.fz) or rename them to .fz.
+Only Pleiades can fix this properly, in the FITS module.
 
 
 Why you have to sign it yourself
@@ -44,7 +62,8 @@ Installing
 4. PROCESS > Modules > Install Modules...
    Click Search, choose this folder, make sure FZ-pxm.dll is ticked, Install.
 
-5. Test: File > Open any .fits.fz file.
+5. Test: File > Open a .fits.fz file whose name has another dot in it (see Known
+   limitation above).
 
 
 Updating to a new version
